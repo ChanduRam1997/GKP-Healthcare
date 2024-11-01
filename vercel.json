@@ -1,18 +1,15 @@
 {
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
+    }
+  ],
   "routes": [
     {
-      "src": "/(.*)",  // Protect all paths
-      "dest": "/$1",
-      "headers": {
-        "WWW-Authenticate": "Basic realm=\"GKP Healthcare\""
-      },
-      "middleware": [
-        {
-          "type": "basic-auth",
-          "username": "GKPHEALTHCARE",
-          "password": "admin"
-        }
-      ]
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
