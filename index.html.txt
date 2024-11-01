@@ -1,0 +1,47 @@
+!DOCTYPE html
+html lang=en
+head
+    meta charset=UTF-8
+    meta name=viewport content=width=device-width, initial-scale=1.0
+    titleGKP Healthcare - Lab Report Entrytitle
+    link rel=stylesheet href=styles.css
+head
+body
+    header
+        h1GKP Healthcareh1
+        pQuality Lab Testing Servicesp
+    header
+
+    main
+        section class=form-section
+            h2Lab Report Entryh2
+            form id=lab-report-form
+                label for=patient-namePatient Namelabel
+                input type=text id=patient-name name=patientName required
+
+                label for=patient-idPatient IDlabel
+                input type=text id=patient-id name=patientID required
+
+                label for=test-typeTest Typelabel
+                select id=test-type name=testType required
+                    option value=blood-testBlood Testoption
+                    option value=urine-testUrine Testoption
+                    option value=x-rayX-Rayoption
+                    option value=otherOtheroption
+                select
+
+                label for=resultResultlabel
+                textarea id=result name=result rows=4 requiredtextarea
+
+                label for=dateDatelabel
+                input type=date id=date name=date required
+
+                button type=button onclick=submitForm()Submit Reportbutton
+            form
+            p id=confirmation class=hiddenReport submitted successfully!p
+        section
+    main
+
+    script src=script.jsscript
+body
+html
