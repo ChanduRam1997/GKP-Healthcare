@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GKP Healthcare - Lab Report Entry</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>GKP Healthcare</h1>
+        <p>Quality Lab Testing Services</p>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Lab Report Entry</h2>
+            <form id="lab-report-form">
+                <label for="patient-name">Patient Name:</label>
+                <input type="text" id="patient-name" name="patientName" required>
+
+                <label for="patient-id">Patient ID:</label>
+                <input type="text" id="patient-id" name="patientID" required>
+
+                <label for="test-type">Test Type:</label>
+                <select id="test-type" name="testType" required>
+                    <option value="blood-test">Blood Test</option>
+                    <option value="urine-test">Urine Test</option>
+                    <option value="x-ray">X-Ray</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="result">Result:</label>
+                <textarea id="result" name="result" rows="4" required></textarea>
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <button type="button" onclick="submitForm()">Submit Report</button>
+            </form>
+            <p id="confirmation" class="hidden">Report submitted successfully!</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
